@@ -1,0 +1,56 @@
+{
+  "id": "demo",
+  "name": "Demo Medical Supplies (fictional)",
+  "assistantName": "Demo Assistant",
+  "siteUrl": "https://demo.example",
+  "privacyPolicyUrl": "https://demo.example/privacy-policy",
+  "timezone": "Africa/Dar_es_Salaam",
+  "defaultBranch": "dar",
+  "branches": [
+    {
+      "id": "dar",
+      "name": "Dar es Salaam branch",
+      "label": "Dar es Salaam",
+      "region": "Dar es Salaam",
+      "phone": "+255700000001",
+      "whatsapp": "+255700000001",
+      "email": "dar@demo.example",
+      "hours": {
+        "mon": [["08:00", "17:00"]],
+        "tue": [["08:00", "17:00"]],
+        "wed": [["08:00", "17:00"]],
+        "thu": [["08:00", "17:00"]],
+        "fri": [["08:00", "17:00"]],
+        "sat": [["09:00", "13:00"]]
+      },
+      "closedDates": ["2026-12-25", "2026-12-26"]
+    },
+    {
+      "id": "arusha",
+      "name": "Arusha branch",
+      "label": "Arusha",
+      "region": "Arusha",
+      "phone": "+255700000002",
+      "email": "arusha@demo.example",
+      "hours": {
+        "mon": [["08:00", "16:30"]],
+        "tue": [["08:00", "16:30"]],
+        "wed": [["08:00", "16:30"]],
+        "thu": [["08:00", "16:30"]],
+        "fri": [["08:00", "16:30"]]
+      }
+    }
+  ],
+  "teams": {
+    "general": { "label": "Customer desk", "whatsapp": "+255700000001", "email": "info@demo.example" },
+    "sales": { "label": "Sales", "phone": "+255700000003", "email": "sales@demo.example" },
+    "pharmacist": { "label": "Pharmacist on duty", "phone": "+255700000004" },
+    "customer_service": { "label": "Customer service", "email": "care@demo.example", "phone": "+255700000005" }
+  },
+  "swahiliAnswers": false,
+  "retrieval": { "topK": 4, "minCoverage": 0.5 },
+  "liveData": {
+    "branchFactsConfirmedBy": "Fixture data for tests",
+    "trainingsUrl": "https://demo.example/api/trainings"
+  }
+}

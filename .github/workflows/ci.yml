@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.3.x
+      - run: bun install --frozen-lockfile
+      - run: bun run typecheck
+      - run: bun test
+      # Golden-set gate on the fictional demo tenant (no model, no key needed).
+      - name: Golden set gate (demo, extractive)
+        env:
+          TENANT: demo
+          DB_PATH: ./ci.sqlite
+        run: |
+          bun src/cli.ts ingest
+          for id in ordering-procedure delivery-areas returns-policy about-us product-malaria-rdt trainings-general; do
+            bun src/cli.ts approve "$id" --by "CI"
+          done
+          bun src/cli.ts eval --threshold 0.9

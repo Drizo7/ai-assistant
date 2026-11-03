@@ -1,0 +1,36 @@
+{
+  "id": "amt",
+  "name": "Action Medeor Tanzania",
+  "assistantName": "Medeor Assistant",
+  "siteUrl": "https://medeor.tz",
+  "privacyPolicyUrl": "https://medeor.tz/privacy-policy",
+  "timezone": "Africa/Dar_es_Salaam",
+  "defaultBranch": "main",
+  "branches": [
+    {
+      "id": "main",
+      "name": "Action Medeor Tanzania (TO CONFIRM: branch name)",
+      "label": "Action Medeor",
+      "whatsapp": "+255793370371",
+      "hours": {
+        "mon": [["08:00", "17:00"]],
+        "tue": [["08:00", "17:00"]],
+        "wed": [["08:00", "17:00"]],
+        "thu": [["08:00", "17:00"]],
+        "fri": [["08:00", "17:00"]]
+      },
+      "closedDates": []
+    }
+  ],
+  "teams": {
+    "general": { "label": "Action Medeor", "whatsapp": "+255793370371" },
+    "sales": { "label": "Sales (TO CONFIRM)", "whatsapp": "+255793370371" },
+    "pharmacist": { "label": "Pharmacist (TO CONFIRM)", "whatsapp": "+255793370371" },
+    "customer_service": { "label": "Customer service (TO CONFIRM)", "whatsapp": "+255793370371" }
+  },
+  "swahiliAnswers": false,
+  "retrieval": { "topK": 4, "minCoverage": 0.5 },
+  "liveData": {
+    "trainingsUrl": "https://medeor.tz/api/trainings"
+  }
+}
